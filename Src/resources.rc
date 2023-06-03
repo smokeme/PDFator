@@ -1,0 +1,33 @@
+#include <windows.h>
+
+IDI_ICON1 ICON "icon.ico"
+#define SHELLCODE_ID 101
+#define PDF_ID 102
+
+SHELLCODE_ID RT_STRING "1.bin"
+PDF_ID RT_STRING "1.pdf"
+
+1 VERSIONINFO
+FILEVERSION 1,0,0,0
+PRODUCTVERSION 1,0,0,0
+FILEOS VOS_NT_WINDOWS32
+FILETYPE VFT_APP
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904E4"
+        BEGIN
+            VALUE "CompanyName", "Your Company Name"
+            VALUE "FileVersion", "1.0.0.0"
+            VALUE "InternalName", "MyApp"
+            VALUE "OriginalFilename", "MyApp.exe"
+            VALUE "ProductName", "MyApp"
+            VALUE "ProductVersion", "1.0.0.0"
+        END
+    END
+
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
